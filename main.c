@@ -57,6 +57,6 @@ int main(int argc, char** argv) {
     printf("Real memory: %.2f %s\n", mem.memory_usage, mem.units);
 
     format_memory(rusage.ri_phys_footprint, &mem);
-    printf("Memory memory: %.2f %s\n", mem.memory_usage, mem.units);
+    printf("Memory: %.2f %s\n", mem.memory_usage, mem.units);
     return 0;
 }
