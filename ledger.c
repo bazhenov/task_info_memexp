@@ -61,7 +61,8 @@ int main(int argc, char **argv) {
         perror("ledger() failed");
     }
 
-    for(size_t i = 0; i< ledgers_cnt; i++) {
+    printf(" %10s %-35s %12s %12s %12s %s\n", "GROUP", "LEDGER", "BALANCE", "CREDIT", "DEBIT", "UNITS");
+    for (size_t i = 0; i< ledgers_cnt; i++) {
         ledger_entry_info *entry = &entries[i];
         ledger_template_info *template = &templates[i];
         if ( ledger_name == NULL || strstr(template->lti_name, ledger_name) != NULL ) {
